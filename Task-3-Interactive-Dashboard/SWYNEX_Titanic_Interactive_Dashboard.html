@@ -1,0 +1,52 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SWYNEX Titanic Survival Dashboard</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f3f6fa;color:#172033}.wrap{max-width:1200px;margin:auto;padding:24px}
+header{background:#1e3a8a;color:white;padding:28px;border-radius:18px;margin-bottom:18px}h1{margin:0 0 6px}
+.filters,.kpis,.grid{display:grid;gap:14px}.filters{grid-template-columns:repeat(4,1fr);background:white;padding:16px;border-radius:14px;margin-bottom:16px}
+select{width:100%;padding:9px;border:1px solid #ddd;border-radius:8px}.kpis{grid-template-columns:repeat(4,1fr);margin-bottom:16px}
+.card,.chart{background:white;padding:18px;border-radius:14px;box-shadow:0 4px 15px #0000000b}.small{font-size:12px;color:#64748b}.big{font-size:28px;font-weight:700;margin-top:5px}
+.grid{grid-template-columns:1fr 1fr}.wide{grid-column:1/-1}.chart h3{margin-top:0}
+.barrow{display:flex;align-items:center;gap:10px;margin:13px 0}.label{width:100px;font-size:13px}.barbg{height:22px;background:#e5e7eb;border-radius:6px;flex:1}.bar{height:100%;background:#2563eb;border-radius:6px}.pct{width:55px;font-weight:700;font-size:13px}
+@media(max-width:800px){.filters,.kpis,.grid{grid-template-columns:1fr 1fr}}@media(max-width:550px){.filters,.kpis,.grid{grid-template-columns:1fr}.wide{grid-column:auto}}
+</style></head><body>
+<div class="wrap">
+<header><h1>Titanic Survival Analysis Dashboard</h1><div>SWYNEX Data Analyst Internship • Task 3</div></header>
+<div class="filters">
+<div><b>Gender</b><select id="gender"><option>All</option><option>Female</option><option>Male</option></select></div>
+<div><b>Passenger Class</b><select id="pclass"><option>All</option><option>1st Class</option><option>2nd Class</option><option>3rd Class</option></select></div>
+<div><b>Age Group</b><select id="age"><option>All</option><option>Child</option><option>Teenager</option><option>Young Adult</option><option>Adult</option><option>Senior</option></select></div>
+<div><b>Embarkation</b><select id="embarked"><option>All</option><option>C</option><option>S</option><option>Q</option></select></div>
+</div>
+<div class="kpis">
+<div class="card"><div class="small">TOTAL PASSENGERS</div><div class="big">714</div></div>
+<div class="card"><div class="small">SURVIVORS</div><div class="big">290</div></div>
+<div class="card"><div class="small">NON-SURVIVORS</div><div class="big">424</div></div>
+<div class="card"><div class="small">OVERALL SURVIVAL RATE</div><div class="big">40.62%</div></div>
+</div>
+<div class="grid" id="charts"></div>
+</div>
+<script>
+const data=[
+["Survival Rate by Gender",[["Female",75.48],["Male",20.53]],"gender"],
+["Survival Rate by Passenger Class",[["1st Class",65.59],["2nd Class",47.98],["3rd Class",23.94]],"pclass"],
+["Survival Rate by Age Group",[["Child",57.97],["Teenager",47.73],["Young Adult",35.47],["Adult",42.68],["Senior",33.33]],"age"],
+["Survival Rate by Family Group",[["Medium Family",63.16],["Small Family",55.60],["Alone",32.18],["Large Family",17.50]],"family"],
+["Survival Rate by Embarkation Port",[["C",60.77],["S",36.51],["Q",28.57]],"embarked"]
+];
+function render(){
+let box=document.getElementById("charts");box.innerHTML="";
+data.forEach(([title,vals,key],idx)=>{
+let c=document.createElement("div");c.className="chart"+(idx===4?" wide":"");
+c.innerHTML="<h3>"+title+"</h3>";
+let selected=document.getElementById(key)?.value||"All";
+vals.forEach(([label,v])=>{
+let opacity=(selected==="All"||selected===label)?"1":".25";
+c.innerHTML+=`<div class="barrow" style="opacity:${opacity}"><div class="label">${label}</div><div class="barbg"><div class="bar" style="width:${v}%"></div></div><div class="pct">${v.toFixed(2)}%</div></div>`;
+});
+box.appendChild(c);
+});
+}
+["gender","pclass","age","embarked"].forEach(id=>document.getElementById(id).onchange=render);render();
+</script></body></html>
