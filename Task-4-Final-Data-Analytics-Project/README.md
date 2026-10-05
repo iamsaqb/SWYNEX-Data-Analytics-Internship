@@ -373,3 +373,15 @@ Medium Family had the highest observed survival rate at **63.16%**, while Large 
 - Port Q: **28.57%**
 
 Port C had the highest observed survival rate, while Port Q had the lowest.
+
+### 7. 🏁  Conclusion
+
+The **Titanic Survival Analysis** project demonstrates how raw data can be transformed into meaningful insights through a structured data analytics process.
+
+Starting with **data cleaning and preparation**, the project progressed through **SQL-based exploratory analysis, visualization, interactive dashboard development, and final insight generation**.
+
+The analysis identified clear differences in observed survival rates across **gender, passenger class, age groups, family groups, and embarkation categories**.
+
+The final **interactive dashboard** provides a user-friendly way to explore these patterns and understand the analytical results.
+
+Overall, this project provided practical experience in applying **SQL, MySQL, data analysis, data visualization, dashboard development, Git, and GitHub** to an end-to-end analytics project.
