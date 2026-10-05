@@ -175,3 +175,147 @@ After completing the cleaning process, the prepared dataset was stored as:
 
 ```text
 titanic_cleaned.csv
+
+
+# 5. 🔍 Exploratory Data Analysis
+
+After completing data cleaning, exploratory data analysis was performed using **SQL/MySQL**.
+
+The purpose of EDA was to understand passenger survival patterns across different categories.
+
+---
+
+## 5.1 Overall Passenger Statistics
+
+The overall analysis produced the following results:
+
+| Metric                | Result |
+| --------------------- | ------ |
+| Total Passengers      | 714    |
+| Survivors             | 290    |
+| Non-Survivors         | 424    |
+| Overall Survival Rate | 40.62% |
+
+### Observation
+
+Out of 714 passengers analyzed, **290 survived** and **424 did not survive**.
+
+The overall observed survival rate was **40.62%**.
+
+---
+
+## 5.2 Survival by Gender
+
+The survival rate was analyzed separately for female and male passengers.
+
+| Gender | Survival Rate |
+| ------ | ------------- |
+| Female | 75.48%        |
+| Male   | 20.53%        |
+
+### Observation
+
+Female passengers had a substantially higher observed survival rate than male passengers in the analyzed dataset.
+
+---
+
+## 5.3 Survival by Passenger Class
+
+The analysis was performed across all three passenger classes.
+
+| Passenger Class | Survival Rate |
+| --------------- | ------------- |
+| 1st Class       | 65.59%        |
+| 2nd Class       | 47.98%        |
+| 3rd Class       | 23.94%        |
+
+### Observation
+
+The observed survival rate was highest among **1st-class passengers** and lowest among **3rd-class passengers**.
+
+---
+
+## 5.4 Survival by Gender and Passenger Class
+
+A combined analysis was performed to understand survival patterns across gender and passenger class.
+
+| Gender | Passenger Class | Survival Rate |
+| ------ | --------------- | ------------- |
+| Female | 1st             | 96.47%        |
+| Female | 2nd             | 91.89%        |
+| Female | 3rd             | 46.08%        |
+| Male   | 1st             | 39.60%        |
+| Male   | 2nd             | 15.15%        |
+| Male   | 3rd             | 15.02%        |
+
+### Observation
+
+The combined analysis shows considerable differences in observed survival rates when gender and passenger class are considered together.
+
+Female passengers in the first and second classes had particularly high observed survival rates, while male passengers in the second and third classes had substantially lower observed rates.
+
+---
+
+## 5.5 Survival by Age Group
+
+Passengers were grouped into the following age categories:
+
+- Child
+- Teenager
+- Young Adult
+- Adult
+- Senior
+
+| Age Group   | Passengers | Survivors | Survival Rate |
+| ----------- | ---------- | --------- | ------------- |
+| Child       | 69         | 40        | 57.97%        |
+| Teenager    | 44         | 21        | 47.73%        |
+| Young Adult | 296        | 105       | 35.47%        |
+| Adult       | 239        | 102       | 42.68%        |
+| Senior      | 66         | 22        | 33.33%        |
+
+### Observation
+
+The **Child** group had the highest observed survival rate among the defined age groups at **57.97%**.
+
+The **Senior** group had the lowest observed survival rate at **33.33%**.
+
+---
+
+## 5.6 Survival by Family Group
+
+Passengers were grouped according to the number of siblings, spouses, parents, and children traveling with them.
+
+The categories were:
+
+- Alone
+- Small Family
+- Medium Family
+- Large Family
+
+| Family Group  | Passengers | Survivors | Survival Rate |
+| ------------- | ---------- | --------- | ------------- |
+| Medium Family | 38         | 24        | 63.16%        |
+| Small Family  | 232        | 129       | 55.60%        |
+| Alone         | 404        | 130       | 32.18%        |
+| Large Family  | 40         | 7         | 17.50%        |
+
+### Observation
+
+Passengers classified into **Medium Family** and **Small Family** groups had higher observed survival rates than passengers traveling alone or in large family groups.
+
+---
+
+## 5.7 Survival by Embarkation Port
+
+The analysis also compared survival rates across embarkation ports.
+
+| Embarkation Port | Passengers | Survivors | Survival Rate |
+| ---------------- | ---------- | --------- | ------------- |
+| C                | 130        | 79        | 60.77%        |
+| S                | 556        | 203       | 36.51%        |
+| Q                | 28         | 8         | 28.57%        |
+
+### Observation
+
+Passengers associated with embarkation port **C** had the highest observed survival rate at **60.77%**, while passengers associated with **Q** had the lowest at **28.57%**.
