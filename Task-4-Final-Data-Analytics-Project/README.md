@@ -13,8 +13,13 @@
 
 ## 1. 📋 Problem Statement
 
-Explain the problem you are solving and what you want to discover
-from the Titanic dataset.
+This project represents the Final Data Analytics Project completed as part of my Data Analyst Internship at SWYNEX Technologies.
+
+The objective of this project is to combine the complete data analytics workflow into a single case study, starting from data cleaning and preparation, followed by exploratory data analysis, visualization, dashboard development, and communication of key insights.
+
+The project uses the Titanic dataset to analyze passenger survival patterns based on demographic and travel-related factors such as gender, passenger class, age group, family group, and embarkation port.
+
+The final outcome is an interactive dashboard that presents key performance indicators, visualizations, filters, and analytical findings in an easy-to-understand format.
 
 ---
 
