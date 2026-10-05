@@ -1,9 +1,5 @@
 
-# SWYNEX-Exploratory-Data-Analysis
-
-Data Analysis Intern at SWYNEX Technology  - Task 02
-
-# SWYNEX Internship Task 2: Exploratory Data Analysis Using SQL
+#  Task 2: Exploratory Data Analysis Using SQL
 
 ## 📌 Project Overview
 
