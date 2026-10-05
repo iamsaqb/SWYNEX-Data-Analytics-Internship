@@ -1,272 +1,220 @@
-# Task 4: Final Data Analytics Project
+# 📊 Task 4: Final Data Analytics Project
 
-## 📌 Project Title
-### Titanic Survival Analysis and Interactive Dashboard
+# Titanic Survival Analysis and Interactive Dashboard
+
+A complete end-to-end data analytics case study developed as part of the **Data Analyst Internship at SWYNEX Technologies**.
+
+---
 
 ## 🏢 Internship Information
-- Organization: SWYNEX Technologies
-- Role: Data Analyst Intern
-- Domain: Data & AI
-- Task: Task 4 - Final Data Analytics Project
+
+| Detail | Information |
+|---|---|
+| Organization | SWYNEX Technologies |
+| Role | Data Analyst Intern |
+| Domain | Data & AI |
+| Task | Task 4 - Final Data Analytics Project |
+| Dataset | Titanic Dataset |
+| Tools | SQL, MySQL, HTML, CSS, JavaScript, GitHub |
 
 ---
 
-## 1. 📋 Problem Statement
+# 1. 📌 Project Overview
 
-This project represents the Final Data Analytics Project completed as part of my Data Analyst Internship at SWYNEX Technologies.
+This project represents the final stage of my Data Analyst Internship at **SWYNEX Technologies**.
 
-The objective of this project is to combine the complete data analytics workflow into a single case study, starting from data cleaning and preparation, followed by exploratory data analysis, visualization, dashboard development, and communication of key insights.
+The objective of this project was to combine the work completed during the previous internship tasks into one complete data analytics case study.
 
-The project uses the Titanic dataset to analyze passenger survival patterns based on demographic and travel-related factors such as gender, passenger class, age group, family group, and embarkation port.
+The project follows an end-to-end analytics workflow:
 
-The final outcome is an interactive dashboard that presents key performance indicators, visualizations, filters, and analytical findings in an easy-to-understand format.
+**Data Collection → Data Cleaning → Exploratory Data Analysis → Visualization → Interactive Dashboard → Business Insights**
+
+The **Titanic dataset** was selected for this project to analyze passenger survival patterns based on different demographic and travel-related characteristics.
+
+The analysis focuses on factors such as:
+
+- Gender
+- Passenger Class
+- Age Group
+- Family Group
+- Embarkation Port
+
+The final outcome is an interactive dashboard that presents key performance indicators, charts, filters, and analytical findings in a clear and user-friendly format.
 
 ---
 
-## 2. 🎯 Project Objectives
+# 2. 🎯 Problem Statement
 
-- Analyze passenger survival patterns
-- Clean and prepare the dataset
-- Perform exploratory data analysis using SQL
-- Create meaningful visualizations
-- Develop an interactive dashboard
-- Identify key data-driven insights
+The Titanic dataset contains information about passengers who traveled on the Titanic, including demographic, travel, and survival information.
+
+The objective of this project is to analyze the available passenger data and identify meaningful patterns in survival.
+
+The analysis attempts to answer the following questions:
+
+1. What percentage of passengers survived?
+2. How did survival rates differ between female and male passengers?
+3. How did passenger class relate to observed survival rates?
+4. How did survival vary across different age groups?
+5. How did family grouping relate to observed survival rates?
+6. Did survival rates vary across embarkation ports?
+7. How can these findings be presented through an interactive dashboard?
+
+The purpose is to transform raw passenger data into structured analytical information and present the findings through an interactive visualization.
 
 ---
 
-## 3. 📂 Dataset Information
+# 3. 🎯 Project Objectives
 
-### Dataset
-Titanic Dataset
+The main objectives of the project are:
 
-### Dataset Description
+- Clean and prepare the Titanic dataset for analysis.
+- Identify and handle missing and inconsistent data.
+- Perform exploratory data analysis using SQL.
+- Calculate important survival metrics.
+- Analyze survival patterns across different passenger characteristics.
+- Create meaningful data visualizations.
+- Develop an interactive dashboard.
+- Present important KPIs in a clear format.
+- Identify key observations from the analysis.
+- Combine all stages into one complete analytics case study.
 
-Briefly describe what the dataset contains.
+---
 
-### Dataset Size
+# 4. 📂 Dataset Information
 
-- Records analyzed: 714
-- Survivors: 290
-- Non-Survivors: 424
+## Dataset Used
 
-### Important Columns
+**Titanic Dataset**
+
+The Titanic dataset contains information about passengers, including their survival status, passenger class, gender, age, family information, ticket information, fare, and embarkation port.
+
+The dataset was used throughout the project for data cleaning, SQL analysis, visualization, and dashboard development.
+
+---
+
+## Dataset Size
+
+After importing and preparing the dataset, the analysis was performed on:
+
+- **Total Passengers:** 714
+- **Survivors:** 290
+- **Non-Survivors:** 424
+- **Overall Survival Rate:** 40.62%
+
+---
+
+## Dataset Columns
 
 | Column | Description |
 |---|---|
-| PassengerId | Passenger identifier |
-| Survived | Survival status |
-| Pclass | Passenger class |
-| Name | Passenger name |
-| Sex | Gender |
-| Age | Passenger age |
-| SibSp | Siblings/spouses aboard |
-| Parch | Parents/children aboard |
-| Ticket | Ticket information |
+| PassengerId | Unique identification number of the passenger |
+| Survived | Indicates whether the passenger survived |
+| Pclass | Passenger class: 1st, 2nd, or 3rd |
+| Name | Name of the passenger |
+| Sex | Gender of the passenger |
+| Age | Age of the passenger |
+| SibSp | Number of siblings or spouses aboard |
+| Parch | Number of parents or children aboard |
+| Ticket | Passenger ticket number |
 | Fare | Passenger fare |
-| Embarked | Port of embarkation |
+| Cabin | Cabin information |
+| Embarked | Port from which the passenger embarked |
 
 ---
 
-## 4. 🧹 Data Cleaning & Preparation
+# 5. 🧹 Data Cleaning and Preparation
 
-Explain the work completed in Task 1.
+The first stage of the project was data cleaning and preparation.
 
-### Cleaning Steps
+The raw Titanic dataset was imported into **MySQL** and stored in a raw table before performing the cleaning process.
 
-- Checked missing values
-- Checked duplicate records
-- Checked invalid values
-- Checked inconsistent categorical values
-- Handled missing Embarked values
-- Removed Cabin because of extensive missing data
-- Trimmed text fields
-- Performed final validation
-
-### Output
-
-` t i t a n i c _ c l e a n e d . c s v `
+The purpose of this stage was to improve data quality and prepare the dataset for reliable analysis.
 
 ---
 
-## 5. 🔍 Exploratory Data Analysis
+## 5.1 Missing Value Analysis
 
-Explain the SQL analysis completed in Task 2.
+Missing values were checked for all columns.
 
-### 5.1 Overall Survival
+The major missing-data issue was found in the `Cabin` column.
 
-| Metric | Value |
-|---|---:|
-| Total Passengers | 714 |
-| Survivors | 290 |
-| Non-Survivors | 424 |
-| Survival Rate | 40.62% |
+The dataset contained:
 
-### 5.2 Survival by Gender
+- **599 missing Cabin values**
+- **2 missing Embarked values**
 
-| Gender | Survival Rate |
-|---|---:|
-| Female | 75.48% |
-| Male | 20.53% |
-
-### 5.3 Survival by Passenger Class
-
-| Class | Survival Rate |
-|---|---:|
-| 1st | 65.59% |
-| 2nd | 47.98% |
-| 3rd | 23.94% |
-
-### 5.4 Survival by Age Group
-
-Add your age-group results here.
-
-### 5.5 Survival by Family Group
-
-Add your family-group results here.
-
-### 5.6 Survival by Embarkation
-
-Add your embarkation results here.
+The remaining important analytical columns did not contain missing values requiring treatment.
 
 ---
 
-## 6. 📊 Dashboard
+## 5.2 Cabin Column
 
-Explain Task 3.
+The `Cabin` column contained a very high number of missing values.
 
-### Dashboard Features
+Because approximately **599 of the 714 records** had missing cabin information, the column was removed from the cleaned dataset.
 
-- KPI cards
-- Survival by Gender
-- Survival by Passenger Class
-- Survival by Age Group
-- Survival by Family Group
-- Survival by Embarkation
-- Interactive filters
-
-### KPI Summary
-
-- Total Passengers: 714
-- Survivors: 290
-- Non-Survivors: 424
-- Overall Survival Rate: 40.62%
-
-### 🔗 Live Dashboard
-
-Add your GitHub Pages URL here:
-
-`https://iamsaqb.github.io/SWYNEX-Data-Analytics-Internship/`
+This prevented the large amount of missing cabin information from affecting the analysis.
 
 ---
 
-## 7. 💡 Key Business Insights
+## 5.3 Embarked Column
 
-### Insight 1: Gender
+The `Embarked` column contained **2 missing values**.
 
-Explain the main observation.
-
-### Insight 2: Passenger Class
-
-Explain the main observation.
-
-### Insight 3: Age Group
-
-Explain the main observation.
-
-### Insight 4: Family Group
-
-Explain the main observation.
-
-### Insight 5: Embarkation
-
-Explain the main observation.
+These missing values were handled during the cleaning process using the most frequent embarkation category.
 
 ---
 
-## 8. 🛠️ Tools & Technologies
+## 5.4 Duplicate Check
 
-- SQL
-- MySQL
-- HTML
-- CSS
-- JavaScript
-- Git
-- GitHub
-- Data Visualization
+Duplicate records were checked to ensure that the dataset did not contain unintended duplicate passenger records.
+
+The duplicate validation did not identify a duplicate-record issue requiring removal.
 
 ---
 
-## 9. 🔄 End-to-End Project Workflow
+## 5.5 Data Consistency Checks
 
-Raw Dataset
-      ↓
-Data Cleaning
-      ↓
-Cleaned Dataset
-      ↓
-SQL Exploratory Analysis
-      ↓
-Data Visualization
-      ↓
-Interactive Dashboard
-      ↓
-Business Insights
-      ↓
-Final Analytics Case Study
+The following categorical values were checked:
+
+- Gender
+- Embarkation port
+
+The values were checked for inconsistencies and unexpected categories.
 
 ---
 
-## 10. 📁 Project Structure
+## 5.6 Numerical Validation
 
-SWYNEX-Data-Analytics-Internship/
-│
-├── Task-1-Data-Cleaning/
-│
-├── Task-2-Exploratory-Data-Analysis/
-│
-├── Task-3-Interactive-Dashboard/
-│
-└── Task-4-Final-Data-Analytics-Project/
-    └── README.md
+The following columns were checked for invalid values:
+
+- Age
+- Fare
+- Survived
+- Passenger Class
+
+The validation confirmed that the values used for analysis were within the expected ranges.
 
 ---
 
-## 11. 📈 Project Outcome
+## 5.7 Text Cleaning
 
-Explain what you achieved through the complete project.
+Text fields were cleaned using trimming operations.
 
----
+The following columns were processed:
 
-## 12. 🔗 Project Links
+- Name
+- Sex
+- Ticket
+- Embarked
 
-### GitHub Repository
-Your repository URL
-
-### Live Dashboard
-Your GitHub Pages URL
-
-### LinkedIn Explanation
-Your LinkedIn post URL
+This helped maintain consistent formatting in the cleaned dataset.
 
 ---
 
-## 13. 🎓 Internship Details
+## 5.8 Cleaned Dataset
 
-Organization: SWYNEX Technologies
-Role: Data Analyst Intern
-Domain: Data & AI
-Task: Final Data Analytics Project
+After completing the cleaning process, the prepared dataset was stored as:
 
----
-
-## 14. 👨‍💻 Author
-
-### Saquib Akhter
-
-Data Analyst Intern | SQL | MySQL | Data Analytics | Data Visualization
-
----
-
-## 15. 📜 Conclusion
-
-Briefly summarize the complete project and what you learned.
+```text
+titanic_cleaned.csv
