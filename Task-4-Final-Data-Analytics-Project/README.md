@@ -175,6 +175,3 @@ After completing the cleaning process, the prepared dataset was stored as:
 
 ```text
 titanic_cleaned.csv
-
-Passengers associated with embarkation port C had the highest observed survival rate at 60.77%, while passengers associated with Q had the lowest at 28.57%
-
