@@ -1,5 +1,5 @@
 
-# SWYNEX Internship Task 1: Data Cleaning & Preparation Using SQL
+#  Task 1: Data Cleaning & Preparation Using SQL
 
 ## 📌 Project Overview
 
