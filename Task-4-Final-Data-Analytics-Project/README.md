@@ -176,8 +176,9 @@ After completing the cleaning process, the prepared dataset was stored as:
 ```text
 titanic_cleaned.csv
 
+---
 
-# 5. 🔍 Exploratory Data Analysis
+### 5.  Exploratory Data Analysis
 
 After completing data cleaning, exploratory data analysis was performed using **SQL/MySQL**.
 
@@ -185,7 +186,7 @@ The purpose of EDA was to understand passenger survival patterns across differen
 
 ---
 
-## 5.1 Overall Passenger Statistics
+### 5.1 Overall Passenger Statistics
 
 The overall analysis produced the following results:
 
@@ -319,3 +320,56 @@ The analysis also compared survival rates across embarkation ports.
 ### Observation
 
 Passengers associated with embarkation port **C** had the highest observed survival rate at **60.77%**, while passengers associated with **Q** had the lowest at **28.57%**.
+
+# 6. 💡 Key Business Insights
+
+### Insight 1: Overall Survival
+
+- Total passengers analyzed: **714**
+- Survivors: **290**
+- Non-survivors: **424**
+- Overall observed survival rate: **40.62%**
+
+---
+
+### Insight 2: Gender
+
+Female passengers had an observed survival rate of **75.48%**, compared with **20.53%** for male passengers.
+
+---
+
+### Insight 3: Passenger Class
+
+- 1st Class: **65.59%**
+- 2nd Class: **47.98%**
+- 3rd Class: **23.94%**
+
+The analysis shows a clear difference in observed survival rates across passenger classes.
+
+---
+
+### Insight 4: Gender and Passenger Class
+
+Female 1st-class and 2nd-class passengers had particularly high observed survival rates, while male 2nd-class and 3rd-class passengers had substantially lower observed rates.
+
+---
+
+### Insight 5: Age Group
+
+Children had the highest observed survival rate among the defined age groups at **57.97%**, while Seniors had the lowest at **33.33%**.
+
+---
+
+### Insight 6: Family Group
+
+Medium Family had the highest observed survival rate at **63.16%**, while Large Family had the lowest at **17.50%**.
+
+---
+
+### Insight 7: Embarkation
+
+- Port C: **60.77%**
+- Port S: **36.51%**
+- Port Q: **28.57%**
+
+Port C had the highest observed survival rate, while Port Q had the lowest.
